@@ -3,6 +3,7 @@ import { Eye, EyeOff, OctagonX, User } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import Head from "next/head";
 
 const Register = () => {
     const [username, setUsername] = useState<string>("");
@@ -15,7 +16,20 @@ const Register = () => {
     };
 
     return (
-        <div className="w-full bg-background-primary/90">
+        <>
+            <Head>
+                <title>Register - Direct Vibe</title>
+                <meta name="description" content="Create your account and join Direct Vibe community" />
+                <meta name="keywords" content="register, sign up, account, direct vibe, community" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta property="og:title" content="Register - Direct Vibe" />
+                <meta property="og:description" content="Create your account and join Direct Vibe community" />
+                <meta property="og:type" content="website" />
+                <meta name="twitter:card" content="summary" />
+                <meta name="twitter:title" content="Register - Direct Vibe" />
+                <meta name="twitter:description" content="Create your account and join Direct Vibe community" />
+            </Head>
+            <div className="w-full bg-background-primary/90">
             <div className="max-w-[1440px] px-4 pt-20 sm:px-8 lg:px-20 mx-auto lg:h-[calc(100vh-40px)] flex flex-col lg:flex-row justify-center lg:justify-between items-center relative py-8 lg:py-0">
                 <div className="w-80 h-64 lg:w-120 lg:h-100 absolute bottom-0 lg:translate-y-0 translate-y-1/2 lg:bottom-auto left-1/2 -translate-x-1/2 z-0  lg:top-auto">
                     <Image
@@ -116,6 +130,7 @@ const Register = () => {
                 </form>
             </div>
         </div>
+        </>
     );
 };
 
