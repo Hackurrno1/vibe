@@ -26,7 +26,7 @@ const SignIn = () => {
                         className="animate-levitate"
                     />
                 </div>
-                <div className="bg-blue-500/20 w-32 h-32 sm:w-40 sm:h-40 lg:w-50 lg:h-50 rounded-full absolute blur-xl top-10 lg:top-auto" />
+                <div className="bg-blue-500/20 w-32 h-32 sm:w-40 sm:h-40 lg:w-100 lg:h-100 rounded-full absolute blur-3xl top-10 lg:top-auto" />
 
                 <div className="flex flex-col gap-6 lg:gap-10 tracking-wider z-10 text-center lg:text-left mb-8 lg:mb-0">
                     <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight lg:leading-16">
@@ -82,23 +82,11 @@ const SignIn = () => {
                             <p className="text-gray-400 text-sm sm:text-base">or continue with</p>
                             <div className="w-[30%] h-0.5 bg-gray-300" />
                         </div>
-                        <div className="flex justify-between gap-2 sm:gap-4">
-                            <button className="px-4 sm:px-6 lg:px-8 py-3 rounded-xl bg-white shadow-2xl cursor-pointer flex-1 transition-all duration-300 hover:scale-105 hover:shadow-3xl hover:bg-blue-50 hover:-translate-y-1">
-                                <div className="w-5 h-5 sm:w-6 sm:h-6 relative mx-auto transition-transform duration-300 hover:scale-110">
-                                    <Image src={"/images/auth/google-icon.svg"} alt="google-icon" fill />
-                                </div>
-                            </button>
-                            <button className="px-4 sm:px-6 lg:px-8 py-3 rounded-xl bg-white shadow-2xl cursor-pointer flex-1 transition-all duration-300 hover:scale-105 hover:shadow-3xl hover:bg-gray-50 hover:-translate-y-1">
-                                <div className="w-5 h-5 sm:w-6 sm:h-6 relative mx-auto transition-transform duration-300 hover:scale-110">
-                                    <Image src={"/images/auth/apple-icon.svg"} alt="apple-icon" fill />
-                                </div>
-                            </button>
-                            <button className="px-4 sm:px-6 lg:px-8 py-3 rounded-xl bg-white shadow-2xl cursor-pointer flex-1 transition-all duration-300 hover:scale-105 hover:shadow-3xl hover:bg-blue-100 hover:-translate-y-1">
-                                <div className="w-5 h-5 sm:w-6 sm:h-6 relative mx-auto transition-transform duration-300 hover:scale-110">
-                                    <Image src={"/images/auth/facebook-icon.svg"} alt="facebook-icon" fill />
-                                </div>
-                            </button>
-                        </div>
+                        <button className="w-full px-4 sm:px-6 lg:px-8 py-3 rounded-xl bg-white shadow-2xl cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-3xl hover:bg-blue-50 hover:-translate-y-1 flex items-center justify-center">
+                            <div className="w-5 h-5 sm:w-6 sm:h-6 relative transition-transform duration-300 hover:scale-110">
+                                <Image src={"/images/auth/google-icon.svg"} alt="google-icon" fill />
+                            </div>
+                        </button>
                     </div>
                 </form>
             </div>
